@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jobs Dahboard</title>
+</head>
+<body>
+    <h2>Jobs Tailored For You</h2>
+    {% for job in jobs %}
+        <div style="border: 1px solid black; margin: 10px; padding: 10px;">
+            <h3>{{ job.title }} at {{ job.company }}</h3>
+            <p>{{ job.description[:300] }}...</p>
+            <a href="{{ job.url }}" target="_blank">View Job</a>
+        </div>
+    {% endfor %}
+</body>
+</html>
